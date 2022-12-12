@@ -1,14 +1,13 @@
 import React from 'react'
-import { Text, StyleSheet, Pressable } from 'react-native'
+import { Text, StyleSheet, TouchableOpacity } from 'react-native'
 import LinkingConfiguration from '../navigation/LinkingConfiguration';
 
 export default function Button(props: { onPress: any; title?: any | undefined; }) {
     const { onPress, title = ' ' } = props;
     return (
-        <Pressable style={styles.button} onPress={onPress}> 
+        <TouchableOpacity style={styles.button} onPress={onPress}> 
             <Text style={styles.text}>{title}</Text>
-         </Pressable>
-    //     <Button title={title} onPress={onPress}/>
+         </TouchableOpacity>
     );
   }
 
@@ -21,6 +20,7 @@ export default function Button(props: { onPress: any; title?: any | undefined; }
         borderRadius: 4,
         elevation: 3,
         backgroundColor: 'blue',
+        marginBottom: 20
     },
     text: {
         fontSize: 16,

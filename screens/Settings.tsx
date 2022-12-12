@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, Dimensions } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -12,12 +12,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export default ( {navigation}: {navigation: any} ) => {
   return (
     <View style={styles.container}> 
-      {/* <Button title="Notifications" color="white"/>
-      <Button title="Account" color="blue" /> */}
-
-      <Button title="Notifications" onPress={() => navigation.navigate('NotFound')} />
+      <View style={styles.button}>
+      <Button title="Notifications" onPress={() => navigation.navigate('NotFound')}/>
       <Button title="Accounts" onPress={() => navigation.navigate('NotFound')} />
-      
+      </View>
     </View>
   );
 }
@@ -28,17 +26,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-
   button: {
-    flex: 1,
+    justifyContent: 'center',
+    width: Dimensions.get('window').width
     }
 });
