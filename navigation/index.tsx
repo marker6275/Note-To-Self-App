@@ -18,6 +18,9 @@ import TabOneScreen from '../screens/Homescreen';
 import TabTwoScreen from '../screens/ActionPlan';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import ExtraHelp from '../Action Plans/ExtraHelp';
+import Plan3 from '../Action Plans/Plan3';
+import Plan2 from '../Action Plans/Plan2';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -41,6 +44,9 @@ function RootNavigator() {
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Screen name="Homescreen" component={TabOneScreen} options={{ title: 'Home' }} />
+      <Stack.Screen name="ExtraHelp" component={ExtraHelp} options={{title: "I Need Extra Help"}} />
+      <Stack.Screen name="Grade2" component={Plan2}/>
+      <Stack.Screen name="Grade3" component={Plan3}/>
     </Stack.Navigator>
   );
 }
@@ -68,7 +74,7 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Modal')}
+              onPress={() => navigation.navigate('NotFound')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>

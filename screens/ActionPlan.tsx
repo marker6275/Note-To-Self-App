@@ -11,16 +11,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export default ( {navigation}: {navigation: any} ) => {
   return (
     <View style={styles.container}>
-      {/* <Text style={styles.title}>Tab Two</Text> */}
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
-
       <Button title="Grade 1" onPress={() => navigation.navigate('NotFound')}/>
-      <Button title="Grade 2" onPress={() => navigation.navigate('NotFound')}/>
-      <Button title="Grade 3" onPress={() => navigation.navigate('NotFound')}/>
+      <Button title="Grade 2" onPress={() => navigation.navigate('Grade2')}/>
+      <Button title="Grade 3" onPress={() => navigation.navigate('Grade3')}/>
 
-      <Button title="I need extra help" onPress={() => navigation.navigate('NotFound')}/>
-
+      <Button title="I need extra help" onPress={() => navigation.navigate('ExtraHelp')}/>
     </View>
   );
 }
