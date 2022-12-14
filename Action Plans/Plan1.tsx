@@ -9,24 +9,30 @@ import CheckBox from '../components/Checkbox';
 
 export default function Plan1({ navigation }: RootTabScreenProps<'Grade1'>) {
 
-    const [pressed, setPressed] = useState(false);
+    const [pressed1, setPressed1] = useState(false);
+    const [pressed2, setPressed2] = useState(false);
+    const [pressed3, setPressed3] = useState(false);
     return (
         <ScrollView style={styles.containerBox} contentContainerStyle={styles.container}>
             <Text style={styles.title}>Grade 1 Action Plan</Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.emphasis}>Here are your action items for today?</Text>
-            <CheckBox title="Box" onPress={() => setPressed(!pressed)} isChecked={pressed} textStyle={styles.checklist}/>
-            <FlatList
+            <CheckBox title="random 1" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
+            <CheckBox title="random 2" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
+            <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
+            {/* <FlatList
             data={[
                 // WE NEED TO FIX THIS
                 // Make a checklist
                 {key: 'random 1'},
                 {key: 'random 2'},
                 {key: 'random 3'},
-                // ALSO NEED TO MAKE A REFRESH BUTTON 
+                
             ]}
-            renderItem={({item}) => <Text style={styles.text}>{item.key}</Text>} />
-
+            renderItem={({item}) => <Text style={styles.text}>{item.key}</Text>} /> */}
+            {/* // ALSO NEED TO MAKE A REFRESH BUTTON  */}
+            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />   
+            <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/>
         </ScrollView>
             
     )
@@ -36,11 +42,11 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 30
+        marginTop: 30,
+        paddingBottom: 70
     },
     containerBox: {
         marginHorizontal: 10,
-        marginBottom: 10
     },
     title: {
       fontSize: 25,

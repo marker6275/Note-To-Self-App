@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   separator: {
-    marginVertical: 30,
+    marginTop: 10,
+    marginBottom: 30,
     height: 1,
     width: '80%',
   },

@@ -1,13 +1,20 @@
 import { StyleSheet, Linking, FlatList, ScrollView } from 'react-native';
+import { useState } from 'react';
 import { Text, View } from '../components/Themed';
 import Button from '../components/Button';
 import { RootTabScreenProps } from '../types';
 import { useLinkProps, useNavigation } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import CheckBox from '../components/Checkbox';
 
 export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
+    const [pressed1, setPressed1] = useState(false);
+    const [pressed2, setPressed2] = useState(false);
+    const [pressed3, setPressed3] = useState(false);
+    const [pressed4, setPressed4] = useState(false);
+    const [pressed5, setPressed5] = useState(false);
     return (
-        <ScrollView contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={styles.container} style={styles.containerBox}>
             <Text style={styles.title}>Grade 3 Action Plan</Text>
 
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
@@ -23,7 +30,7 @@ export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
 
             {/* RANDOMIZE DISTRACTION TECHNIQUE? */}
             <Text style={styles.emphasis}>5-4-3-2-1</Text>
-            <FlatList 
+            {/* <FlatList 
             data={[
                 {key: 'Look around the room, and name:'},
                 {key: '5 things you can see,'},
@@ -34,17 +41,19 @@ export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
                 
             ]}
             renderItem={({item}) => <Text style={styles.text}>{item.key}</Text>}
-            />
-            
+            /> */}
+            <CheckBox title="random 1" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
+            <CheckBox title="random 2" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
+            <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
+            <CheckBox title="random 4" onPress={() => setPressed4(!pressed4)} isChecked={pressed4} textStyle={styles.checklist}/>
+            <CheckBox title="random 5" onPress={() => setPressed5(!pressed5)} isChecked={pressed5} textStyle={styles.checklist}/>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
             <Text style={styles.text}>Once you're feeling more grounded from the distraction techniques, you can take a look at more things that help you relax.</Text>
 
             {/* RANDOMIZE AN ACTIVITY FROM THE FAVOURITES PAGE */}
-
-
+            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/>
-
         </ScrollView>
             
     )
@@ -52,10 +61,14 @@ export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+    //   flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
-      marginTop: 30
+      marginTop: 30,
+      paddingBottom: 70
+    },
+    containerBox: {
+        marginHorizontal: 10,
     },
     title: {
       fontSize: 25,
@@ -76,4 +89,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         justifyContent: 'center',
     },
+    checklist: {
+        color: '#fff',
+        backgroundColor: '#fff'
+    }
 })
