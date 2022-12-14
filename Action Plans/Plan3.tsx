@@ -53,9 +53,10 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
+      marginTop: 30
     },
     title: {
-      fontSize: 20,
+      fontSize: 25,
       fontWeight: 'bold',
     },
     separator: {
@@ -64,11 +65,11 @@ const styles = StyleSheet.create({
       width: '80%',
     },
     text: {
-        fontSize: 14,
+        fontSize: 19,
         fontWeight: 'normal',
     },
     emphasis: {
-        fontSize: 14,
+        fontSize: 18,
         fontWeight: 'bold',
     },
 })

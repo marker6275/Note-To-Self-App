@@ -11,7 +11,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export default ( {navigation}: {navigation: any} ) => {
   return (
     <View style={styles.container}>
-      <Button title="Grade 1" onPress={() => navigation.navigate('NotFound')}/>
+      <Button title="Grade 1" onPress={() => navigation.navigate('Grade1')}/>
       <Button title="Grade 2" onPress={() => navigation.navigate('Grade2')}/>
       <Button title="Grade 3" onPress={() => navigation.navigate('Grade3')}/>
 
