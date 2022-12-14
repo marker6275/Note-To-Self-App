@@ -12,7 +12,9 @@ export default ( {navigation}: {navigation: any} ) => {
   return (
     <View style={styles.container}>
       <Button title="Grade 1" onPress={() => navigation.navigate('Grade1')}/>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Button title="Grade 2" onPress={() => navigation.navigate('Grade2')}/>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <Button title="Grade 3" onPress={() => navigation.navigate('Grade3')}/>
 
       <Button title="I need extra help" onPress={() => navigation.navigate('ExtraHelp')}/>
