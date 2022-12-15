@@ -14,7 +14,7 @@ export default ( {navigation}: {navigation: any} ) => {
     <View style={styles.container}> 
       <View style={styles.button}>
       <Button title="Notifications" onPress={() => navigation.navigate('NotFound')}/>
-      <Button title="Accounts" onPress={() => navigation.navigate('NotFound')} />
+      <Button title="Account" onPress={() => navigation.navigate('NotFound')} />
       </View>
     </View>
   );

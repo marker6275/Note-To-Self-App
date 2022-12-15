@@ -30,23 +30,13 @@ export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
 
             {/* RANDOMIZE DISTRACTION TECHNIQUE? */}
             <Text style={styles.emphasis}>5-4-3-2-1</Text>
-            {/* <FlatList 
-            data={[
-                {key: 'Look around the room, and name:'},
-                {key: '5 things you can see,'},
-                {key: '4 things you can feel,'},
-                {key: '3 things you can hear,'},
-                {key: '2 things you can smell,'},
-                {key: 'and 1 thing you can taste.'},
-                
-            ]}
-            renderItem={({item}) => <Text style={styles.text}>{item.key}</Text>}
-            /> */}
-            <CheckBox title="random 1" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
-            <CheckBox title="random 2" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
-            <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
-            <CheckBox title="random 4" onPress={() => setPressed4(!pressed4)} isChecked={pressed4} textStyle={styles.checklist}/>
-            <CheckBox title="random 5" onPress={() => setPressed5(!pressed5)} isChecked={pressed5} textStyle={styles.checklist}/>
+            <Text style={styles.text}>Look around the room, and name:</Text>
+
+            <CheckBox title="5 things you can see," onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
+            <CheckBox title="4 things you can feel," onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
+            <CheckBox title="3 things you can hear," onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
+            <CheckBox title="2 things you can smell," onPress={() => setPressed4(!pressed4)} isChecked={pressed4} textStyle={styles.checklist}/>
+            <CheckBox title="1 thing you can taste." onPress={() => setPressed5(!pressed5)} isChecked={pressed5} textStyle={styles.checklist}/>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
             <Text style={styles.text}>Once you're feeling more grounded from the distraction techniques, you can take a look at more things that help you relax.</Text>
@@ -91,6 +81,6 @@ const styles = StyleSheet.create({
     },
     checklist: {
         color: '#fff',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
     }
 })

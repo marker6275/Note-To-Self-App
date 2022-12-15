@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TouchableOpacity, Appearance } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Appearance, Dimensions } from "react-native";
 import { useState, useCallback, useEffect } from 'react'
 import { MaterialCommunityIcons } from "@expo/vector-icons";
   
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "center",
         flexDirection: "row",
-        width: 150,
+        width: Dimensions.get('window').width / 2,
         marginTop: 5,
         marginHorizontal: 5,
         color: 'blue',  
