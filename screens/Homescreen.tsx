@@ -5,22 +5,21 @@ import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import FavBar from '../components/FavoritesBar';
 import Button from '../components/Button';
+import Card from '../components/Card';
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'Homescreen'>) {
+export default function HomeScreen({ navigation }: RootTabScreenProps<'Homescreen'>) {
   return (
     <View style={styles.container}>
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
-      <FavBar/>
+      {/* <FavBar/> */}
+      <Card onPress={() => navigation.navigate('NotFound')}/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    top: 50,
-    backgroundColor: 'green',
+    flex: 1,
   },
   title: {
     fontSize: 20,

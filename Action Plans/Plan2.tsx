@@ -25,16 +25,7 @@ export default function Plan2({ navigation }: RootTabScreenProps<'Grade2'>) {
             <Text style={styles.emphasis}>3 counts in, and 6 counts out.</Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.emphasis}>Here are your action items for today?</Text>
-            {/* <FlatList
-            data={[
-                // WE NEED TO FIX THIS
-                // Make a checklist
-                {key: 'random from favorites 1'},
-                {key: 'random from favorites 2'},
-                {key: 'random from favorites 3'},
-                // ALSO NEED TO MAKE A REFRESH BUTTON 
-            ]}
-            renderItem={({item}) => <Text style={styles.text}>{item.key}</Text>} /> */}
+
             <CheckBox title="random 1" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
             <CheckBox title="random 2" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
             <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
@@ -43,16 +34,6 @@ export default function Plan2({ navigation }: RootTabScreenProps<'Grade2'>) {
 
             {/* RANDOMIZE DISTRACTION TECHNIQUE? */}
             <Text style={styles.emphasis}>5-4-3-2-1</Text>
-            {/* <FlatList contentContainerStyle={styles.container}
-            data={[
-                {key: 'Look around the room, and name 5 things you can see,'},
-                {key: '4 things you can feel,'},
-                {key: '3 things you can hear,'},
-                {key: '2 things you can smell,'},
-                {key: 'and 1 thing you can taste.'},
-            ]}
-            renderItem={({item}) => <Text style={styles.text}>{item.key}</Text>}
-            /> */}
             <CheckBox title="random 1" onPress={() => setPressed21(!pressed21)} isChecked={pressed21} textStyle={styles.checklist}/>
             <CheckBox title="random 2" onPress={() => setPressed22(!pressed22)} isChecked={pressed22} textStyle={styles.checklist}/>
             <CheckBox title="random 3" onPress={() => setPressed23(!pressed23)} isChecked={pressed23} textStyle={styles.checklist}/>

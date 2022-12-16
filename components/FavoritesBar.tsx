@@ -1,5 +1,6 @@
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-
+// WORK IN PROGRESS
+// DOESN'T REALLY WORK
 const FavBar = () => {
     return (
     <View style={styles.container}>
