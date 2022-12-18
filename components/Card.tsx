@@ -6,7 +6,7 @@ export default function Card(props: any) {
         <TouchableOpacity onPress={props.onPress}>
             <View style={styles.card}>
                 <Text style={styles.text}>
-                    CARD
+                    {props.text}
                 </Text>
             </View>
         </TouchableOpacity>
@@ -15,20 +15,17 @@ export default function Card(props: any) {
 
 const styles = StyleSheet.create({
     card: {
-        height: Dimensions.get('window').width / 2 - 15,
-        width: Dimensions.get('window').width / 2 - 15,
+        height: Dimensions.get('window').width / 2 - 30,
+        width: Dimensions.get('window').width / 2 - 30,
         backgroundColor: 'green',
         margin: 15,
-        alignContent: 'center',
         borderRadius: 5,
     },
     text: {
         flex: 1,
-        alignContent: 'center',
-        justifyContent: 'center',
         fontSize: 35,
-        left: (Dimensions.get('window').width / 2 - 15) / 4,
-        paddingTop: 10
+        textAlign: 'center',
+        paddingTop: 4
     },
     title: {
         fontSize: 35,

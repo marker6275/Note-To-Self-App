@@ -1,9 +1,15 @@
-import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
+import { TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text } from './Themed';
+import { useState } from 'react';
+
 // WORK IN PROGRESS
 // DOESN'T REALLY WORK
 const FavBar = () => {
+    const [color, setColor] = useState('orange');
+    
     return (
     <View style={styles.container}>
+        <TouchableOpacity><Text style={styles.title}>Favorites</Text></TouchableOpacity>
         <TouchableOpacity><Text style={styles.title}>Favorites</Text></TouchableOpacity>
     </View>
     );
@@ -12,16 +18,12 @@ const FavBar = () => {
 const styles = StyleSheet.create({
     title: {
         fontSize: 20,
-        // fontWeight: 'bold',
-        // marginHorizontal: 50
-      },
+    },
     container: {
-        // alignItems: 'center',
-        // justifyContent: 'center',
         borderRadius: 5,
-        // elevation: 3,
-        backgroundColor: 'blue',
-        // marginBottom: 20
+        backgroundColor: 'orange',
+        flex: 1,
+        flexDirection: 'row'
     },
 })
 export default FavBar;
