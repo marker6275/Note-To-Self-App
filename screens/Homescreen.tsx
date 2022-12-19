@@ -11,12 +11,34 @@ import AddButton from '../components/AddButton';
 // NEED TO FIX WHERE THIS IS ON THE PAGE
 // SHOULD BE IN TITLE BAR, GOTTA FIGURE THAT OUT
 export default function HomeScreen({ navigation }: RootTabScreenProps<'Homescreen'>) {
-  
+  const cardList = [
+    {
+      id: 1,
+      card: <Card onPress={() => navigation.navigate('NotFound')} text={"card"}/>
+    }];
+
+const [cards, setCards] = useState(cardList);
+
+function addCards() {
+    const newList = cards.concat(
+    {
+        id: cards.length + 1,
+        card: <Card onPress={() => navigation.navigate('NotFound')} text={cards.length + 1}/>
+    })
+    setCards(newList);
+}
   return (
     <ScrollView style={styles.container}>
+      {cards.map((c) => {
+                return (
+                    <View key={c.id}>
+                        {c.card}
+                    </View>
+                );
+                })}
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <FavBar/> */}
-      <AddButton onPress={() => navigation.navigate('NotFound')}/>
+      <AddButton length={cards.length} onPress={addCards}/>
     </ScrollView>
   );
 }
