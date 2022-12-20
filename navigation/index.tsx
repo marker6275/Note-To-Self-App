@@ -8,7 +8,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { useState } from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
@@ -23,9 +22,6 @@ import ExtraHelp from '../Action Plans/ExtraHelp';
 import Plan3 from '../Action Plans/Plan3';
 import Plan2 from '../Action Plans/Plan2';
 import Plan1 from '../Action Plans/Plan1';
-import AddButton from '../components/AddButton';
-import Card from '../components/Card';
-import { View, Text } from '../components/Themed';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -65,27 +61,7 @@ const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
   const colorScheme = useColorScheme();
-    
-    const cardList = [
-      {
-        id: 1,
-        card: <Card onPress={null} text={"card"}/>
-      }];
-      // () => navigation.navigate('NotFound')
-    const [cards, setCards] = useState(cardList);
-    const newList = cards.concat(
-      {
-          id: cards.length + 1,
-          card: <Card onPress={null} text={cards.length + 1}/>
-      })
-    function addCards() {
-      const newList = cards.concat(
-      {
-          id: cards.length + 1,
-          card: <Card onPress={null} text={cards.length + 1}/>
-      })
-      setCards(newList);
-  }
+
   return (
     <BottomTab.Navigator
       initialRouteName="Homescreen"
@@ -98,6 +74,20 @@ function BottomTabNavigator() {
         options={({ navigation }: RootTabScreenProps<'Homescreen'>) => ({
           title: 'Home',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          headerRight: () => (
+            <Pressable
+              onPress={() => navigation.navigate('NotFound')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+              <FontAwesome
+                name="info-circle"
+                size={25}
+                color={Colors[colorScheme].text}
+                style={{ marginRight: 15 }}
+              />
+            </Pressable>
+          ),
         })}
       />
       <BottomTab.Screen
