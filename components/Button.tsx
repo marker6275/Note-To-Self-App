@@ -19,7 +19,7 @@ export default function Button(props: { onPress: any; title?: any | undefined; }
         paddingHorizontal: 32,
         borderRadius: 4,
         elevation: 3,
-        backgroundColor: 'blue',
+        backgroundColor: 'transparent',
         marginBottom: 20
     },
     text: {
@@ -27,7 +27,7 @@ export default function Button(props: { onPress: any; title?: any | undefined; }
         lineHeight: 21,
         fontWeight: 'bold',
         letterSpacing: 0.25,
-        color: 'white',
+        color: 'black',
     }
 
   })

@@ -18,19 +18,24 @@ export default function Plan2({ navigation }: RootTabScreenProps<'Grade2'>) {
     const [pressed25, setPressed25] = useState(false);
     return (
         <ScrollView style={styles.containerBox} contentContainerStyle={styles.container}>
-            <Text style={styles.title}>Grade 2 Action Plan</Text>
+            <Text style={styles.title}>Your Grade 2 Action Plan</Text>
 
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.text}>Take a deep breath</Text>
-            <Text style={styles.emphasis}>3 counts in, and 6 counts out.</Text>
+            <Text style={styles.text}>Take a minute to</Text>
+            <Text style={styles.emphasis}>stop and breathe!</Text>
+            <Text style={styles.text}>Breathe in for 3 counts,</Text>
+            <Text style={styles.text}>and breathe out for 6 counts.</Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.emphasis}>Here are your action items for today?</Text>
 
+            <Text style={styles.emphasis}>Here are your action items for today:</Text>
             <CheckBox title="random 1" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
             <CheckBox title="random 2" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
             <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.emphasis}>In addition to these, take a look at these quick exercises:</Text>
+
+            <Text style={styles.emphasis}>Well done! Now, take a</Text>
+            <Text style={styles.emphasis}>look at these quick exercises:</Text>
+            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
             {/* RANDOMIZE DISTRACTION TECHNIQUE? */}
             <Text style={styles.emphasis}>5-4-3-2-1</Text>
@@ -42,7 +47,7 @@ export default function Plan2({ navigation }: RootTabScreenProps<'Grade2'>) {
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.emphasis}>Color Count</Text>
             <Text style={styles.text}>Look around you and keep naming everything you see that is a certain color and count them. 
-            I.e. Count all the red objects in the room.</Text>
+            For example, count all the red objects in the room you're in.</Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
             <Text style={styles.emphasis}>Box Breathing</Text>
@@ -70,13 +75,14 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
     },
     separator: {
-      marginVertical: 30,
+      marginVertical: 20,
       height: 1,
       width: '80%',
     },
     text: {
         fontSize: 19,
         fontWeight: 'normal',
+        textAlign: 'center',
     },
     emphasis: {
         fontSize: 19,
@@ -84,6 +90,6 @@ const styles = StyleSheet.create({
     },
     checklist: {
         color: '#fff',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
     },
 })

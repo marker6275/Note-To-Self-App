@@ -14,24 +14,21 @@ export default function Plan1({ navigation }: RootTabScreenProps<'Grade1'>) {
     const [pressed3, setPressed3] = useState(false);
     return (
         <ScrollView style={styles.containerBox} contentContainerStyle={styles.container}>
-            <Text style={styles.title}>Grade 1 Action Plan</Text>
+            <Text style={styles.title}>Your Grade 1 Action Plan</Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.emphasis}>Here are your action items for today?</Text>
+            
+            <Text style={styles.text}>Take a minute to</Text>
+            <Text style={styles.emphasis}>stop and breathe!</Text>
+            <Text style={styles.text}>Breathe in for 3 counts,</Text>
+            <Text style={styles.text}>and breathe out for 6 counts.</Text>
+            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+
+            <Text style={styles.emphasis}>Here are your action items for today:</Text>
             <CheckBox title="random 1" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
             <CheckBox title="random 2" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
             <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
-            {/* <FlatList
-            data={[
-                // WE NEED TO FIX THIS
-                // Make a checklist
-                {key: 'random 1'},
-                {key: 'random 2'},
-                {key: 'random 3'},
-                
-            ]}
-            renderItem={({item}) => <Text style={styles.text}>{item.key}</Text>} /> */}
-            {/* // ALSO NEED TO MAKE A REFRESH BUTTON  */}
-            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />   
+            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+
             <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/>
         </ScrollView>
             

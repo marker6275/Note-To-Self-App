@@ -24,8 +24,10 @@ export default function ExtraHelp({ navigation }: RootTabScreenProps<'ExtraHelp'
     // }
   return (
     <View style={styles.container}>
+
       <Text style={styles.title}>Crisis Hotline</Text>
-      <Text style={styles.text}>Text "HOME" to 741741</Text>
+      <Text style={styles.text}>Text "HOME" to <Text style={styles.phone} onPress={()=>{Linking.openURL('tel:8329458288');}}>741741</Text> NEED TO FIX</Text>
+
       <Text style={styles.separator}/>
       <Text style={styles.title}>National Suicide Prevention Lifeline</Text>
       {/* NEED TO CHANGE PHONE NUMBER LATER */}
