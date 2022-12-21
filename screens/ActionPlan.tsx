@@ -1,9 +1,9 @@
-import { SafeAreaView, FlatList, StyleSheet, StatusBar, Image } from 'react-native';
+import { SafeAreaView, FlatList, TouchableWithoutFeedback, StyleSheet, StatusBar, Image } from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import Button from '../components/Button';
 import NotFoundScreen from './NotFoundScreen';
-import { useLinkProps, useNavigation } from '@react-navigation/native'
+import { NavigationContainerRefContext, useLinkProps, useNavigation } from '@react-navigation/native'
 import TabOneScreen from './Homescreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -11,15 +11,21 @@ export default ( {navigation}: {navigation: any} ) => {
   return (
     
     <View style={styles.container}>
-      <Image style={styles.image} source={require('../images/YGiGgYcRBAKygdJ2ugvb.webp')} />
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('Grade1')}>
+        <Image style={styles.image} source={require('../images/greentick.png')} />
+      </TouchableWithoutFeedback>
       <Button title="Grade 1 Action Plan" onPress={() => navigation.navigate('Grade1')}/>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-      <Image style={styles.image} source={require('../images/YGiGgYcRBAKygdJ2ugvb.webp')}/>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('Grade2')}>
+        <Image style={styles.image} source={require('../images/greentick.png')} />
+      </TouchableWithoutFeedback>
       <Button title="Grade 2 Action Plan" onPress={() => navigation.navigate('Grade2')}/>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-      <Image style={styles.image} source={require('../images/YGiGgYcRBAKygdJ2ugvb.webp')}/>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate('Grade3')}>
+        <Image style={styles.image} source={require('../images/greentick.png')} />
+      </TouchableWithoutFeedback>
       <Button title="Grade 3 Action Plan" onPress={() => navigation.navigate('Grade3')}/>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       
