@@ -53,7 +53,8 @@ React.useLayoutEffect(() => {
 }, [cards.length])
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.scroll}>
+      <View style={styles.container}>
       {cards.map((c) => {
         return (
           <View key={c.id} style={styles.view}>
@@ -61,16 +62,21 @@ React.useLayoutEffect(() => {
           </View>
         );
       })}
+      </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
     backgroundColor: '#E2CCB3',
+    flexWrap: 'wrap',
     display: 'flex',
     flexDirection: 'row'
+  },
+  scroll: {
+    flex: 1,
+    backgroundColor: '#E2CCB3',
   },
   title: {
     fontSize: 20,
