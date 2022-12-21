@@ -42,7 +42,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }}/>
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       <Stack.Screen name="Homescreen" component={TabOneScreen} options={{ title: 'Home' }} />
       <Stack.Screen name="ExtraHelp" component={ExtraHelp} options={{title: "I Need Extra Help"}} />
@@ -60,20 +60,26 @@ function RootNavigator() {
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
-  const colorScheme = useColorScheme();
-
+  
   return (
     <BottomTab.Navigator
       initialRouteName="Homescreen"
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme].tint,
+        tabBarActiveTintColor: '#FBE0C3',
+        tabBarInactiveTintColor: 'white',
+        tabBarActiveBackgroundColor: '#344648',
+        tabBarInactiveBackgroundColor: '#344648',
+        headerTintColor: 'white',
+        headerStyle: {
+          backgroundColor: '#344648'
+        }
       }}>
       <BottomTab.Screen
         name="Homescreen"
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'Homescreen'>) => ({
           title: 'Home',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         })}
       />
       <BottomTab.Screen
@@ -81,7 +87,7 @@ function BottomTabNavigator() {
         component={TabTwoScreen}
         options={{
           title: 'Action Plans',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="clipboard" color={color} />,
         }}
       />
       <BottomTab.Screen 
@@ -89,6 +95,7 @@ function BottomTabNavigator() {
       component={SettingsScreen}
       options={{
         title: 'Settings',
+        tabBarIcon: ({ color }) => <TabBarIcon name="gear" color={color}/>
       }} />
     </BottomTab.Navigator>
   );
@@ -101,5 +108,5 @@ function TabBarIcon(props: {
   name: React.ComponentProps<typeof FontAwesome>['name'];
   color: string;
 }) {
-  return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
+  return <FontAwesome size={25} style={{ marginBottom: -3 }} {...props} />;
 }

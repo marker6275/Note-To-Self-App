@@ -3,12 +3,10 @@ import { View, Text} from './Themed'
 
 export default function Card(props: any) {
     return(
-        <TouchableOpacity onPress={props.onPress}>
-            <View style={styles.card}>
-                <Text style={styles.text}>
-                    {props.text}
-                </Text>
-            </View>
+        <TouchableOpacity onPress={props.onPress} style={styles.card}>
+            <Text style={styles.text}>
+                {props.text}
+            </Text>
         </TouchableOpacity>
     )
 }
@@ -17,7 +15,7 @@ const styles = StyleSheet.create({
     card: {
         height: Dimensions.get('window').width / 2 - 30,
         width: Dimensions.get('window').width / 2 - 30,
-        backgroundColor: 'green',
+        backgroundColor: '#344648',
         margin: 15,
         borderRadius: 5,
     },
