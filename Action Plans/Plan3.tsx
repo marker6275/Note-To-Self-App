@@ -1,4 +1,4 @@
-import { StyleSheet, Linking, FlatList, ScrollView } from 'react-native';
+import { StyleSheet, Pressable, Linking, FlatList, ScrollView } from 'react-native';
 import { useState } from 'react';
 import { Text, View } from '../components/Themed';
 import Button from '../components/Button';
@@ -52,7 +52,10 @@ export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
 
             {/* RANDOMIZE AN ACTIVITY FROM THE FAVOURITES PAGE */}
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/>
+
+            <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
+                <Text style={styles.emphasis}>Done!</Text>
+            </Pressable>
         </ScrollView>
             
     )
@@ -92,5 +95,10 @@ const styles = StyleSheet.create({
     },
     checklist: {
         fontSize: 18,
-    }
+    },
+    button: {
+        backgroundColor: '#FBE0C3',
+        padding: 10,
+        borderRadius: 10,
+    },
 })

@@ -1,4 +1,4 @@
-import { StyleSheet, Linking, FlatList, ScrollView } from 'react-native';
+import { StyleSheet, Pressable, Linking, FlatList, ScrollView } from 'react-native';
 import { useState } from 'react';
 import { Text, View } from '../components/Themed';
 import Button from '../components/Button';
@@ -53,7 +53,10 @@ export default function Plan2({ navigation }: RootTabScreenProps<'Grade2'>) {
             <Text style={styles.emphasis}>Box Breathing</Text>
             <Text style={styles.text}>Breath in 4 counts, hold for 4 counts, breath out for 4 counts </Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/>
+
+            <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
+                <Text style={styles.emphasis}>Done!</Text>
+            </Pressable>
             
         </ScrollView>
             
@@ -91,5 +94,10 @@ const styles = StyleSheet.create({
     checklist: {
         color: '#fff',
         backgroundColor: '#fff',
+    },
+    button: {
+        backgroundColor: '#FBE0C3',
+        padding: 10,
+        borderRadius: 10,
     },
 })

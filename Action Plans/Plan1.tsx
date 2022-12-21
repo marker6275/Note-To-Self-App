@@ -1,4 +1,4 @@
-import { StyleSheet, Linking, FlatList, ScrollView, TouchableOpacity } from 'react-native';
+import { StyleSheet, Linking, Pressable, FlatList, ScrollView, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
 import { Text, View } from '../components/Themed';
 import Button from '../components/Button';
@@ -29,7 +29,11 @@ export default function Plan1({ navigation }: RootTabScreenProps<'Grade1'>) {
             <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-            <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/>
+            {/* <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/> */}
+            <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
+                <Text style={styles.emphasis}>Done!</Text>
+            </Pressable>
+
         </ScrollView>
             
     )
@@ -65,5 +69,10 @@ const styles = StyleSheet.create({
     checklist: {
         color: '#fff',
         backgroundColor: '#fff'
+    },
+    button: {
+        backgroundColor: '#FBE0C3',
+        padding: 10,
+        borderRadius: 10,
     },
 })
