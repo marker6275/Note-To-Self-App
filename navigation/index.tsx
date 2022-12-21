@@ -25,6 +25,7 @@ import Plan1 from '../Action Plans/Plan1';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
+    
     <NavigationContainer
       linking={LinkingConfiguration}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
