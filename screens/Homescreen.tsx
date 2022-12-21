@@ -69,14 +69,14 @@ React.useLayoutEffect(() => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#E2CCB3',
+    backgroundColor: 'ghostwhite',
     flexWrap: 'wrap',
     display: 'flex',
     flexDirection: 'row'
   },
   scroll: {
     flex: 1,
-    backgroundColor: '#E2CCB3',
+    backgroundColor: 'ghostwhite',
   },
   title: {
     fontSize: 20,

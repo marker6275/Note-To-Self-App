@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     card: {
         height: Dimensions.get('window').width / 2 - 30,
         width: Dimensions.get('window').width / 2 - 30,
-        backgroundColor: '#344648',
+        backgroundColor: '#FBE0C3',
         margin: 15,
         borderRadius: 5,
         display: 'flex'

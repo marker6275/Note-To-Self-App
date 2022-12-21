@@ -65,5 +65,5 @@ const styles = StyleSheet.create({
     checklist: {
         color: '#fff',
         backgroundColor: '#fff'
-    }
+    },
 })

@@ -25,9 +25,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'ghostwhite',
   },
   button: {
     justifyContent: 'center',
-    width: Dimensions.get('window').width
+    width: Dimensions.get('window').width,
+    backgroundColor: 'transparent',
     }
 });

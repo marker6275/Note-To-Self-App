@@ -65,13 +65,18 @@ function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="Homescreen"
       screenOptions={{
-        tabBarActiveTintColor: '#FBE0C3',
+        tabBarActiveTintColor: '#344648',
         tabBarInactiveTintColor: 'white',
-        tabBarActiveBackgroundColor: '#344648',
-        tabBarInactiveBackgroundColor: '#344648',
+        tabBarStyle: {
+          // marginBottom: -30,
+          top: 0,
+          backgroundColor: '#7D8E95',
+        },
+        tabBarActiveBackgroundColor: '#7D8E95',
+        tabBarInactiveBackgroundColor: '#7D8E95',
         headerTintColor: 'white',
         headerStyle: {
-          backgroundColor: '#344648'
+          backgroundColor: '#7D8E95'
         }
       }}>
       <BottomTab.Screen
@@ -79,6 +84,8 @@ function BottomTabNavigator() {
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'Homescreen'>) => ({
           title: 'Home',
+          tabBarItemStyle: {
+          },
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         })}
       />
