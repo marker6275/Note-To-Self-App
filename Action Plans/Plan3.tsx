@@ -16,39 +16,51 @@ export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
     return (
         <ScrollView contentContainerStyle={styles.container} style={styles.containerBox}>
             <Text style={styles.title}>Your Grade 3 Action Plan</Text>
+            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+
+            <View style={styles.box}>
+                <Text style={styles.text}>Take a minute to</Text>
+                <Text style={styles.emphasis}>stop and breathe!</Text>
+                <Text style={styles.text}>Breathe in for 3 counts,</Text>
+                <Text style={styles.text}>and breathe out for 6 counts.</Text>
+            </View>
 
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.text}>Take a minute to</Text>
-            <Text style={styles.emphasis}>stop and breathe!</Text>
-            <Text style={styles.text}>Breathe in for 3 counts,</Text>
-            <Text style={styles.text}>and breathe out for 6 counts.</Text>
-
+            
+            <View style={styles.box}>
+                <Text style={styles.text}>Who is a trusted person that you can call?</Text>
+                <Text style={styles.emphasis}>Call them!</Text>
+            </View>
+            
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.text}>Who is a trusted person that you can call?</Text>
-            <Text style={styles.emphasis}>Call them!</Text>
-
-            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <Text style={styles.text}>If they don't pick up, call 988</Text>
-            <Text onPress={()=>{Linking.openURL('tel:8329458288');}} style={styles.emphasis}>Call 988 NEED TO FIX</Text>
+            <View style={styles.box}>
+                <Text style={styles.text}>If they don't pick up, call 988</Text>
+                <Text onPress={()=>{Linking.openURL('tel:8329458288');}} style={styles.emphasis}>Call 988 NEED TO FIX</Text>
+            </View>
+            
 
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             <Text style={styles.text}>While you're waiting, here's a </Text>
             <Text style={styles.text}>distraction technique you can use:</Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
+            <View style={styles.box}>
+                {/* RANDOMIZE DISTRACTION TECHNIQUE? */}
+                <Text style={styles.emphasis}>5-4-3-2-1</Text>
+                <Text style={styles.text}>Look around the room, and name:</Text>
 
-            {/* RANDOMIZE DISTRACTION TECHNIQUE? */}
-            <Text style={styles.emphasis}>5-4-3-2-1</Text>
-            <Text style={styles.text}>Look around the room, and name:</Text>
-
-            <CheckBox title="5 things you can see" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
-            <CheckBox title="4 things you can feel" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
-            <CheckBox title="3 things you can hear" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
-            <CheckBox title="2 things you can smell" onPress={() => setPressed4(!pressed4)} isChecked={pressed4} textStyle={styles.checklist}/>
-            <CheckBox title="1 thing you can taste" onPress={() => setPressed5(!pressed5)} isChecked={pressed5} textStyle={styles.checklist}/>
+                <CheckBox title="5 things you can see" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
+                <CheckBox title="4 things you can feel" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
+                <CheckBox title="3 things you can hear" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
+                <CheckBox title="2 things you can smell" onPress={() => setPressed4(!pressed4)} isChecked={pressed4} textStyle={styles.checklist}/>
+                <CheckBox title="1 thing you can taste" onPress={() => setPressed5(!pressed5)} isChecked={pressed5} textStyle={styles.checklist}/>
+            </View>
+            
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-            <Text style={styles.text}>Once you're feeling more grounded from the distraction techniques, you can take a look at more things that help you relax.</Text>
+            <View style={styles.box}>
+                <Text style={styles.text}>Once you're feeling more grounded from the distraction techniques, you can take a look at more things that help you relax.</Text>
+            </View>
 
             {/* RANDOMIZE AN ACTIVITY FROM THE FAVOURITES PAGE */}
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
@@ -97,8 +109,17 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     button: {
-        backgroundColor: '#FBE0C3',
+        backgroundColor: '#FFBB98',
         padding: 10,
         borderRadius: 10,
+    },
+    box: {
+        backgroundColor: '#FBE0C3',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        paddingTop: 30,
+        paddingBottom: 30,
     }
 })
