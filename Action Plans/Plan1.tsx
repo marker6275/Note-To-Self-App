@@ -17,17 +17,23 @@ export default function Plan1({ navigation }: RootTabScreenProps<'Grade1'>) {
             <Text style={styles.title}>Your Grade 1 Action Plan</Text>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
             
-            <Text style={styles.text}>Take a minute to</Text>
-            <Text style={styles.emphasis}>stop and breathe!</Text>
-            <Text style={styles.text}>Breathe in for 3 counts,</Text>
-            <Text style={styles.text}>and breathe out for 6 counts.</Text>
-            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+            <View style={styles.box}>
+                <Text style={styles.text}>Take a minute to</Text>
+                <Text style={styles.emphasis}>stop and breathe!</Text>
+                <Text style={styles.text}>Breathe in for 3 counts,</Text>
+                <Text style={styles.text}>and breathe out for 6 counts.</Text>
+            </View>
 
-            <Text style={styles.emphasis}>Here are your action items for today:</Text>
-            <CheckBox title="random 1" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
-            <CheckBox title="random 2" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
-            <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+            <View style={styles.box}>
+                
+                <Text style={styles.emphasis}>Here are your action items for today:</Text>
+                <CheckBox title="random 1" onPress={() => setPressed1(!pressed1)} isChecked={pressed1} textStyle={styles.checklist}/>
+                <CheckBox title="random 2" onPress={() => setPressed2(!pressed2)} isChecked={pressed2} textStyle={styles.checklist}/>
+                <CheckBox title="random 3" onPress={() => setPressed3(!pressed3)} isChecked={pressed3} textStyle={styles.checklist}/>
+            </View>
+            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+            
 
             {/* <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/> */}
             <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
@@ -44,7 +50,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 30,
-        paddingBottom: 70
+        paddingBottom: 70,
+        flex: 1,
     },
     containerBox: {
         marginHorizontal: 10,
@@ -54,7 +61,7 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
     },
     separator: {
-      marginVertical: 30,
+      marginVertical: 20,
       height: 1,
       width: '80%',
     },
@@ -68,11 +75,20 @@ const styles = StyleSheet.create({
     },
     checklist: {
         color: '#fff',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
     },
     button: {
-        backgroundColor: '#FBE0C3',
+        backgroundColor: '#FFBB98',
         padding: 10,
         borderRadius: 10,
     },
+    box: {
+        backgroundColor: '#FBE0C3',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '100%',
+        paddingTop: 30,
+        paddingBottom: 30,
+    }
 })
