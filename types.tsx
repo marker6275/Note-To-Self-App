@@ -21,6 +21,7 @@ export type RootStackParamList = {
   Grade1: undefined;
   Grade2: undefined;
   Grade3: undefined;
+  Congrats: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

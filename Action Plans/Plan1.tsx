@@ -36,7 +36,7 @@ export default function Plan1({ navigation }: RootTabScreenProps<'Grade1'>) {
             
 
             {/* <Button title="Done!" onPress={() => navigation.navigate('NotFound')}/> */}
-            <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('Congrats')}>
                 <Text style={styles.emphasis}>Done!</Text>
             </Pressable>
 

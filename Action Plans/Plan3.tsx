@@ -65,7 +65,7 @@ export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
             {/* RANDOMIZE AN ACTIVITY FROM THE FAVOURITES PAGE */}
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-            <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('Congrats')}>
                 <Text style={styles.emphasis}>Done!</Text>
             </Pressable>
         </ScrollView>

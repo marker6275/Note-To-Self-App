@@ -7,7 +7,6 @@ import { RootTabScreenProps } from '../types';
 import FavBar from '../components/FavoritesBar';
 import Button from '../components/Button';
 import Card from '../components/Card';
-import AddButton from '../components/AddButton';
 import { FontAwesome } from '@expo/vector-icons';
 
 // NEED TO FIX WHERE THIS IS ON THE PAGE
@@ -54,6 +53,10 @@ React.useLayoutEffect(() => {
 
   return (
     <ScrollView style={styles.scroll}>
+      <FavBar onPress={null}/>
+      <Text style={{color: 'purple'}}>
+        can we keep the random colors here until it's finalized, just so it's easier to see things
+      </Text>
       <View style={styles.container}>
       {cards.map((c) => {
         return (

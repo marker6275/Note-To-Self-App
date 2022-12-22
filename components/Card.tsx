@@ -2,6 +2,7 @@ import { StyleSheet, Dimensions, TouchableOpacity, Pressable } from 'react-nativ
 import { useState } from 'react';
 import { View, Text } from './Themed'
 import { FontAwesome } from '@expo/vector-icons';
+import { getBackgroundColorAsync } from 'expo-system-ui';
 
 export default function Card(props: any) {
     const [icon, setIcon] = useState("star-o");
@@ -19,11 +20,12 @@ export default function Card(props: any) {
               onPress={changeIcon}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
+                width: (Dimensions.get('window').width / 2 - 30) / 3
               })}>
               <FontAwesome
                 name={icon}
                 size={25}
-                color={'white'}
+                color={'green'}
                 style={styles.star}
               />
             </Pressable>

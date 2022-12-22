@@ -68,7 +68,7 @@ export default function Plan2({ navigation }: RootTabScreenProps<'Grade2'>) {
             
             <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 
-            <Pressable style={styles.button} onPress={() => navigation.navigate('NotFound')}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate('Congrats')}>
                 <Text style={styles.emphasis}>Done!</Text>
             </Pressable>
             
