@@ -14,7 +14,7 @@ const CheckBox = (props: any) => {
                 <MaterialCommunityIcons 
                 //FIGURE OUT HOW TO GET TO SAME COLOR AS TEXT
                 //or common color scheme
-                    name={iconName} size={24} color={'green'}/>
+                    name={iconName} size={40} color={'grey'}/>
             </TouchableOpacity>
             <Text style={styles.title}>{props.title}</Text>
         </View>
@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width / 2,
         marginTop: 5,
         marginHorizontal: 5,
+        backgroundColor: 'transparent',
     },
     title: {
-        fontSize: 16,
+        fontSize: 19,
         marginLeft: 5,
-        fontWeight: "600",
     },
 });
