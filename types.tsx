@@ -35,6 +35,8 @@ export type RootTabParamList = {
   Homescreen: undefined;
   ActionPlan: undefined;
   Settings: undefined;
+  NotFound: undefined;
+  Favorites: undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<

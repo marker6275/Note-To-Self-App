@@ -9,6 +9,7 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -45,15 +46,15 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }}/>
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
-      <Stack.Screen name="Homescreen" component={TabOneScreen} options={{ title: 'Home' }} />
-      <Stack.Screen name="ExtraHelp" component={ExtraHelp} options={{title: "I Need Extra Help"}} />
-      <Stack.Screen name="Grade1" component={Plan1} options={{title: ' '}}/>
-      <Stack.Screen name="Grade2" component={Plan2} options={{title: ' '}}/>
-      <Stack.Screen name="Grade3" component={Plan3} options={{title: ' '}}/>
-      <Stack.Screen name="Congrats" component={Congrats} options={{title: ' '}}/>
-      <Stack.Screen name="Favorites" component={Favorites} options={{title: 'Favorites', animation: 'none', headerBackVisible: false}} />
+      <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false, animation: 'slide_from_bottom' }}/>
+      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }}/>
+      <Stack.Screen name="Homescreen" component={TabOneScreen} options={{ title: 'Home' }}/>
+      <Stack.Screen name="ExtraHelp" component={ExtraHelp} options={{ title: "I Need Extra Help" }}/>
+      <Stack.Screen name="Grade1" component={Plan1} options={{ title: ' ' }}/>
+      <Stack.Screen name="Grade2" component={Plan2} options={{ title: ' ' }}/>
+      <Stack.Screen name="Grade3" component={Plan3} options={{ title: ' ' }}/>
+      <Stack.Screen name="Congrats" component={Congrats} options={{ title: ' ', headerBackVisible: false, animation: 'fade' }}/>
+      <Stack.Screen name="Favorites" component={Favorites} options={{ title: 'Favorites', animation: 'none', headerBackVisible: false }}/>
     </Stack.Navigator>
   );
 }
@@ -73,8 +74,6 @@ function BottomTabNavigator() {
         tabBarActiveTintColor: '#344648',
         tabBarInactiveTintColor: 'white',
         tabBarStyle: {
-          // marginBottom: -30,
-          top: 0,
           backgroundColor: '#7D8E95',
         },
         tabBarActiveBackgroundColor: '#7D8E95',
@@ -82,7 +81,7 @@ function BottomTabNavigator() {
         headerTintColor: 'white',
         headerStyle: {
           backgroundColor: '#7D8E95'
-        }
+        },
       }}>
       <BottomTab.Screen
         name="Homescreen"

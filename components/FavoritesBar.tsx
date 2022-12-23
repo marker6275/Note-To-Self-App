@@ -8,19 +8,12 @@ const FavBar = (props: any) => {
     const [home, setHome] = useState(props.home);
     const [fav, setFav] = useState(!props.home);
 
-    const checker = () => {
-        setHome(!home);
-        setFav(!fav);
-    }
-
     function changeFav() {
         props.onPress();
-        // checker();
     }
 
     function changeHome() {
         props.onPress1();
-        // checker();
     }
 
     function changeSelectedHome() {
