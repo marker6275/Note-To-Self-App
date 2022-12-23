@@ -2,11 +2,11 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
+import { RootStackScreenProps, RootTabScreenProps } from '../types';
 import {Linking} from 'react-native'
 import SendSMS from 'react-native-sms'
 
-export default function ExtraHelp({ navigation }: RootTabScreenProps<'ExtraHelp'>) {
+export default function ExtraHelp({ navigation }: RootStackScreenProps<'ExtraHelp'>) {
     // I can't get this to work
     // function sendSMS() {
     //     SendSMS.send({

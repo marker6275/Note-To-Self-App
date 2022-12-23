@@ -1,25 +1,34 @@
 import { TouchableOpacity, StyleSheet, Dimensions } from "react-native";
 import { View, Text } from './Themed';
 import { useState } from 'react';
+import { useRoute } from '@react-navigation/native';
 
-// WORK IN PROGRESS
-// DOESN'T REALLY WORK
 const FavBar = (props: any) => {
     
-    const [home, setHome] = useState(true);
-    const [fav, setFav] = useState(!home);
+    const [home, setHome] = useState(props.home);
+    const [fav, setFav] = useState(!props.home);
 
     const checker = () => {
         setHome(!home);
         setFav(!fav);
     }
 
+    function changeFav() {
+        props.onPress();
+        // checker();
+    }
+
+    function changeHome() {
+        props.onPress1();
+        // checker();
+    }
+
     function changeSelectedHome() {
-        home ? null : checker();
+        home ? null : changeHome();
     }
 
     function changeSelectedFav() {
-        fav ? null : checker();
+        fav ? null : changeFav();
     }
 
     var homeStyle = {

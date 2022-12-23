@@ -2,12 +2,12 @@ import { StyleSheet, Pressable, Linking, FlatList, ScrollView } from 'react-nati
 import { useState } from 'react';
 import { Text, View } from '../components/Themed';
 import Button from '../components/Button';
-import { RootTabScreenProps } from '../types';
+import { RootStackScreenProps, RootTabScreenProps } from '../types';
 import { useLinkProps, useNavigation } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import CheckBox from '../components/Checkbox';
 
-export default function Plan3({ navigation }: RootTabScreenProps<'Grade3'>) {
+export default function Plan3({ navigation }: RootStackScreenProps<'Grade3'>) {
     const [pressed1, setPressed1] = useState(false);
     const [pressed2, setPressed2] = useState(false);
     const [pressed3, setPressed3] = useState(false);

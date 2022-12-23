@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Image } from 'r
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
 
-export default function NotFoundScreen({ navigation }: RootStackScreenProps<'NotFound'>) {
+export default function NotFoundScreen({ navigation }: RootStackScreenProps<'Congrats'>) {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={require('../images/flower.png')} />

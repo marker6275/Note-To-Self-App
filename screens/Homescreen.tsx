@@ -53,7 +53,7 @@ React.useLayoutEffect(() => {
 
   return (
     <ScrollView style={styles.scroll}>
-      <FavBar onPress={null}/>
+      <FavBar onPress={() => navigation.navigate('Favorites')} onPress1={() => navigation.navigate('Root')} home={true}/>
       <Text style={{color: 'purple'}}>
         can we keep the random colors here until it's finalized, just so it's easier to see things
       </Text>
