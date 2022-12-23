@@ -13,20 +13,9 @@ export default ( {navigation}: {navigation: any} ) => {
   return (
     <View style={styles.container}> 
       
-      <View style={styles.button}>
-        
-      {/* Make this page menu format! */}
-      {/* <Menu
-          visible={visible}
-          anchor={<Button onPress={() => navigation.navigate('NotFound')}>Show menu</Button>}>
-          <Menu.Item onPress={() => {}} title="Item 1" />
-          <Menu.Item onPress={() => {}} title="Item 2" />
-          <Menu.Item onPress={() => {}} title="Item 3" />
-      </Menu> */}
+      <Text style={styles.item} onPress={() => navigation.navigate('NotFound')}>Notifications</Text>
+      <Text style={styles.item} onPress={() => navigation.navigate('NotFound')}>Settings</Text>
 
-      <Button title="Notifications" onPress={() => navigation.navigate('NotFound')}/>
-      <Button title="Account" onPress={() => navigation.navigate('NotFound')} />
-      </View>
     </View>
   );
 }
@@ -34,13 +23,17 @@ export default ( {navigation}: {navigation: any} ) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: 'ghostwhite',
   },
   button: {
-    justifyContent: 'center',
     width: Dimensions.get('window').width,
     backgroundColor: 'transparent',
-    }
+  },
+  item: {
+    fontSize: 16,
+    paddingLeft: '15%',
+    paddingVertical: 30,
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+  }
 });
