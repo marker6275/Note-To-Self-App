@@ -25,6 +25,7 @@ import Plan2 from '../Action Plans/Plan2';
 import Plan1 from '../Action Plans/Plan1';
 import Congrats from '../screens/Congrats';
 import Favorites from '../screens/Favorites';
+import AddCard from '../screens/AddCardScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -55,6 +56,7 @@ function RootNavigator() {
       <Stack.Screen name="Grade3" component={Plan3} options={{ title: ' ' }}/>
       <Stack.Screen name="Congrats" component={Congrats} options={{ title: ' ', headerBackVisible: false, animation: 'fade' }}/>
       <Stack.Screen name="Favorites" component={Favorites} options={{ title: 'Favorites', animation: 'none', headerBackVisible: false }}/>
+      <Stack.Screen name="AddCard" component={AddCard} />
     </Stack.Navigator>
   );
 }

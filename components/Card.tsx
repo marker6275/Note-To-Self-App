@@ -7,10 +7,10 @@ import { getBackgroundColorAsync } from 'expo-system-ui';
 export default function Card(props: any) {
     const [icon, setIcon] = useState("star-o");
 
-    function changeIcon() {
+    const changeIcon = () => {
         icon === "star-o" ? setIcon("star") : setIcon("star-o");
     }
-    
+
     return(
         <TouchableOpacity onPress={props.onPress} style={styles.card}>
             <Text style={styles.text}>

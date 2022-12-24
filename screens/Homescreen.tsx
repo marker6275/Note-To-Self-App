@@ -18,11 +18,7 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Homescree
       card: <Card onPress={null} text={"card"}/>
     }];
   const [cards, setCards] = useState(cardList);
-  const newList = cards.concat(
-    {
-        id: cards.length + 1,
-        card: <Card onPress={null} text={cards.length + 1}/>
-    })
+
   function addCards() {
     const newList = cards.concat(
     {
@@ -36,7 +32,7 @@ React.useLayoutEffect(() => {
   navigation.setOptions({
     headerRight: () => (
       <Pressable
-              onPress={addCards}
+              onPress={() => navigation.navigate('AddCard')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
