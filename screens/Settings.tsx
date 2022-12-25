@@ -16,6 +16,10 @@ export default ( {navigation}: {navigation: any} ) => {
       <Text style={styles.item} onPress={() => navigation.navigate('NotFound')}>Settings</Text> */}
       <Button onPress={() => navigation.navigate('NotFound')} title={'Notifications'}/>
       <Button onPress={() => navigation.navigate('NotFound')} title={'Settings'}/>
+      <Button onPress={() => navigation.navigate('NotFound')} title={'Account'}/>
+      <Button onPress={() => navigation.navigate('NotFound')} title={'Our Mission'}/>
+
+
     </View>
   );
 }
@@ -24,12 +28,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'ghostwhite',
-    justifyContent: 'center',
+    // justifyContent: 'center',
     alignContent: 'center'
   },
   button: {
     width: Dimensions.get('window').width,
     backgroundColor: 'transparent',
+    textAlign: 'left',
   },
   item: {
     fontSize: 16,
