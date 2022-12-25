@@ -27,13 +27,17 @@ const FavBar = (props: any) => {
     var homeStyle = {
         flex: 1,
         fontSize: 25,
-        backgroundColor: home ? 'green' : 'black'
+        backgroundColor: home ? 'green' : '#344648',
+        borderTopLeftRadius: 10,
+        borderBottomLeftRadius: 10,
     }
 
     var favStyle = {
         flex: 1,
         fontSize: 25,
-        backgroundColor: fav ? 'green' : 'black'
+        backgroundColor: fav ? 'green' : '#344648',
+        borderTopRightRadius: 10,
+        borderBottomRightRadius: 10,
     }
 
     return (
@@ -51,11 +55,15 @@ const FavBar = (props: any) => {
 const styles = StyleSheet.create({
     home: {
         flex: 1,
-        fontSize: 25,
+        fontSize: 20,
+        textAlign: 'center',
+        color: 'white',
     },
     favorites: {
         flex: 1,
-        fontSize: 25
+        fontSize: 20,
+        textAlign: 'center',
+        color: 'white',
     },
     ContainerTrue: {
         flex: 1,
@@ -66,7 +74,8 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width / 2
     },
     bar: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        margin: 15,
     }
 })
 export default FavBar;
