@@ -5,27 +5,7 @@ import { RootStackScreenProps, RootTabScreenProps } from '../types';
 import FavBar from '../components/FavoritesBar';
 import Card from '../components/Card';
 
-export default function Favorites({ navigation }: RootStackScreenProps<'Favorites'>, props: any) {
-    const newList: any[] = []
-
-    const listItems = global.cards.map((c: any) => {
-
-        if (c.favorited) {
-            newList.concat(c)
-        }
-
-        return (
-            newList.map((c: any) => {
-                <View key={c.id} style={styles.view}>
-                    {c.card}
-                </View>
-            })
-        );
-    })
-
-    const list = global.cards.filter((item: any) => item.favorited == true)
-    const t = list.length
-
+export default function Favorites({ navigation }: RootStackScreenProps<'Favorites'>) {
     return (
         <ScrollView>
             <FavBar onPress={() => navigation.navigate('Favorites')} onPress1={() => navigation.navigate('Root')} home={false}/>
@@ -33,11 +13,11 @@ export default function Favorites({ navigation }: RootStackScreenProps<'Favorite
                 Favorites
             </Text>
             <View style={styles.container}>
-                {list.map((c: any) => {
+                {global.favList.map((c: any) => {
                     return (
-                    <View key={c.id} style={styles.view}>
-                        {c.card}
-                    </View>
+                        <View key={c.id} style={styles.view}>
+                            {c.card}
+                        </View>
                     );
                 })}
             {/* </Text> */}

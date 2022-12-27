@@ -1,5 +1,5 @@
 import { StyleSheet, ScrollView, Pressable } from 'react-native';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -14,20 +14,20 @@ import { FontAwesome } from '@expo/vector-icons';
 export default function HomeScreen({ navigation }: RootTabScreenProps<'Homescreen'>) {
   const cardList = [
     {
-      id: 1,
-      card: <Card onPress={null} text={"card"}/>,
-      favorited: true
+      id: 0,
+      card: <Card onPress={null} text={"cards"} favorited={true} id={0}/>,
     }];
 
   const [cards, setCards] = useState(cardList);
   global.cards = cards
-  
+
+  global.favList = global.cards.filter((item: any) => item.card.props.favorited == true)
+
   function addCards() {
     const newList = global.cards.concat(
     {
-        id: global.cards.length + 1,
-        card: <Card onPress={null} text={global.cards.length + 1}/>,
-        favorited: true
+        id: global.cards.length,
+        card: <Card onPress={() => console.warn(global.id)} text={global.cards.length} favorited={global.cards.length % 3 == 0} id={global.cards.length}/>,
     })
     setCards(newList);
 }
@@ -36,18 +36,18 @@ React.useLayoutEffect(() => {
   navigation.setOptions({
     headerRight: () => (
       <Pressable
-              onPress={addCards}
-              // onPress={() => navigation.navigate('AddCard')}
-              style={({ pressed }) => ({
-                opacity: pressed ? 0.5 : 1,
-              })}>
-              <FontAwesome
-                name="plus"
-                size={25}
-                color={'white'}
-                style={{ marginRight: 15 }}
-              />
-            </Pressable>
+        onPress={addCards}
+        // onPress={() => navigation.navigate('AddCard')}
+        style={({ pressed }) => ({
+          opacity: pressed ? 0.5 : 1,
+        })}>
+        <FontAwesome
+          name="plus"
+          size={25}
+          color={'white'}
+          style={{ marginRight: 15 }}
+        />
+      </Pressable>
     ),
   })
 }, [global.cards.length])
@@ -55,9 +55,6 @@ React.useLayoutEffect(() => {
   return (
     <ScrollView style={styles.scroll}>
       <FavBar onPress={() => navigation.navigate('Favorites')} onPress1={() => navigation.navigate('Root')} home={true}/>
-      <Text style={{color: 'purple'}}>
-        can we keep the random colors here until it's finalized, just so it's easier to see things
-      </Text>
       <View style={styles.container}>
         {global.cards.map((c: any) => {
           return (
