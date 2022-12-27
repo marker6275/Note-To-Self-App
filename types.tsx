@@ -6,11 +6,14 @@
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { ListAccordionGroupContextType } from 'react-native-paper/lib/typescript/components/List/ListAccordionGroup';
 
 declare global {
   namespace ReactNavigation {
     interface RootParamList extends RootStackParamList {}
   }
+  var cards: any;
+  var icon: any;
 }
 
 export type RootStackParamList = {

@@ -7,21 +7,6 @@ import {Linking} from 'react-native'
 import SendSMS from 'react-native-sms'
 
 export default function ExtraHelp({ navigation }: RootStackScreenProps<'ExtraHelp'>) {
-    // I can't get this to work
-    // function sendSMS() {
-    //     SendSMS.send({
-    //             body: 'HELLO',
-    //             recipients: ['8329458288'],
-    //         },
-    //         (completed, cancelled, error) => {
-    //             if (completed) {
-    //                 console.log('SMS Sent Completed')
-    //             } else if (cancelled || error) {
-    //                 console.log('ERROR')
-    //             }
-    //         }
-    //     );
-    // }
   return (
     <View style={styles.container}>
 
@@ -31,6 +16,7 @@ export default function ExtraHelp({ navigation }: RootStackScreenProps<'ExtraHel
       <Text style={styles.separator}/>
       <Text style={styles.title}>National Suicide Prevention Lifeline</Text>
       {/* NEED TO CHANGE PHONE NUMBER LATER */}
+      <Text>Don't press this button</Text>
       <Text style={styles.text}>Call <Text style={styles.phone} onPress={()=>{Linking.openURL('tel:8329458288');}}>988</Text> NEED TO FIX</Text>
     </View>
   );

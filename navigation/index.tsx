@@ -27,9 +27,9 @@ import Congrats from '../screens/Congrats';
 import Favorites from '../screens/Favorites';
 import AddCard from '../screens/AddCardScreen';
 
+
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
-    
     <NavigationContainer
       linking={LinkingConfiguration}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>

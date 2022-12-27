@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
     bar: {
         flexDirection: 'row',
         margin: 15,
+        backgroundColor: 'transparent'
     }
 })
 export default FavBar;

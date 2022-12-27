@@ -15,15 +15,19 @@ export default function HomeScreen({ navigation }: RootTabScreenProps<'Homescree
   const cardList = [
     {
       id: 1,
-      card: <Card onPress={null} text={"card"}/>
+      card: <Card onPress={null} text={"card"}/>,
+      favorited: true
     }];
-  const [cards, setCards] = useState(cardList);
 
+  const [cards, setCards] = useState(cardList);
+  global.cards = cards
+  
   function addCards() {
-    const newList = cards.concat(
+    const newList = global.cards.concat(
     {
-        id: cards.length + 1,
-        card: <Card onPress={null} text={cards.length + 1}/>
+        id: global.cards.length + 1,
+        card: <Card onPress={null} text={global.cards.length + 1}/>,
+        favorited: true
     })
     setCards(newList);
 }
@@ -32,7 +36,8 @@ React.useLayoutEffect(() => {
   navigation.setOptions({
     headerRight: () => (
       <Pressable
-              onPress={() => navigation.navigate('AddCard')}
+              onPress={addCards}
+              // onPress={() => navigation.navigate('AddCard')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
@@ -45,7 +50,7 @@ React.useLayoutEffect(() => {
             </Pressable>
     ),
   })
-}, [cards.length])
+}, [global.cards.length])
 
   return (
     <ScrollView style={styles.scroll}>
@@ -54,13 +59,13 @@ React.useLayoutEffect(() => {
         can we keep the random colors here until it's finalized, just so it's easier to see things
       </Text>
       <View style={styles.container}>
-      {cards.map((c) => {
-        return (
-          <View key={c.id} style={styles.view}>
-              {c.card}
-          </View>
-        );
-      })}
+        {global.cards.map((c: any) => {
+          return (
+            <View key={c.id} style={styles.view}>
+                {c.card}
+            </View>
+          );
+        })}
       </View>
     </ScrollView>
   );

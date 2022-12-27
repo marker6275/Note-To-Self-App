@@ -7,8 +7,10 @@ import { getBackgroundColorAsync } from 'expo-system-ui';
 export default function Card(props: any) {
     const [icon, setIcon] = useState("star-o");
 
+    global.icon = icon
+
     const changeIcon = () => {
-        icon === "star-o" ? setIcon("star") : setIcon("star-o");
+        icon === "star" ? setIcon("star-o") : setIcon("star");
     }
 
     return(
@@ -23,7 +25,7 @@ export default function Card(props: any) {
                 width: (Dimensions.get('window').width / 2 - 30) / 3
               })}>
               <FontAwesome
-                name={icon}
+                name={global.icon}
                 size={25}
                 color={'green'}
                 style={styles.star}

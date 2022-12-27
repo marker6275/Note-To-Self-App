@@ -28,7 +28,7 @@ export default function AddCard({ navigation }: RootStackScreenProps<'AddCard'>)
             <Text style={styles.title}>What would you like to add?</Text>
             <TextInput
                 style={{height: 35, 
-                    color: 'white', 
+                    color: 'black', 
                     backgroundColor: 'white',
                     marginHorizontal: 20,
                     borderRadius: 15,}}
