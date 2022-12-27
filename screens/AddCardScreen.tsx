@@ -11,10 +11,12 @@ import NotFoundScreen from './NotFoundScreen';
 import { useLinkProps, useNavigation } from '@react-navigation/native'
 import TabOneScreen from './Homescreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Card from '../components/Card';
 
 export default function AddCard({ navigation }: RootStackScreenProps<'AddCard'>) {
     const [text, setText] = useState('');
-    
+    // const [cards, setCards] = useState([]);
+    // global.cards = cards
     function showText() {
         <View>
             <Text style={{padding: 10, fontSize: 42}}>
@@ -22,6 +24,15 @@ export default function AddCard({ navigation }: RootStackScreenProps<'AddCard'>)
             </Text>
         </View>
     }
+    // function addCards() {
+    //     const newList = global.cards.concat(
+    //     {
+    //         id: global.cards.length,
+    //         card: <Card onPress={() => console.warn(global.id)} text={global.cards.length} favorited={global.cards.length % 3 == 0} id={global.cards.length}/>,
+    //     })  
+    //     setCards(newList);
+    // }
+
     return (
         <ScrollView>
             
@@ -49,7 +60,7 @@ export default function AddCard({ navigation }: RootStackScreenProps<'AddCard'>)
             {/* <View style={styles.separator}/> */}
             <Text style={styles.emphasis}>All Categories:</Text>
 
-                
+            
             <Button title="Food" onPress={() => navigation.navigate('NotFound')}/>
             <Button title="Music" onPress={() => navigation.navigate('NotFound')}/>
             <Button title="Video" onPress={() => navigation.navigate('NotFound')}/>
@@ -101,3 +112,7 @@ const styles = StyleSheet.create({
         width: '80%',
     }
   });
+
+function setCards(newList: any) {
+    throw new Error('Function not implemented.');
+}
