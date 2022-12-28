@@ -60,7 +60,17 @@ React.useLayoutEffect(() => {
         {global.cards.map((c: any) => {
           return (
             <View key={c.id} style={styles.view}>
-                {c.card}
+                {/* {c.card} */}
+                <Card text={"Food"}></Card>
+                <Card text={"Music"}></Card>
+                <Card text={"Videos"}></Card>
+                <Card text={"Activities"}></Card>
+                <Card text={"Quotes"}></Card>
+                <Card text={"Meditations"}></Card>
+                <Card text={"Journal"}></Card>
+                <Card text={"People"}></Card>
+                <Card text={"Pets"}></Card>
+                <Card text={"Pictures"}></Card>
                 {/* <View style={styles.star}>
                 <Star/>
                 </View> */}
@@ -93,6 +103,8 @@ const styles = StyleSheet.create({
   },
   view: {
     backgroundColor: 'transparent',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   star: {
     position: 'absolute',

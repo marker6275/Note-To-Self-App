@@ -29,14 +29,14 @@ const styles = StyleSheet.create({
     },
     text: {
         flex: 1,
-        fontSize: 35,
+        fontSize: 25,
         textAlign: 'center',
-        paddingTop: 4,
+        paddingTop: 20,
         color: '#252525'
     },
     title: {
         fontSize: 35,
-        alignContent: 'center'
+        alignContent: 'center',
     },
     star: {
         margin: 15,
