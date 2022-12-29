@@ -59,7 +59,7 @@ function RootNavigator() {
       <Stack.Screen name="Grade3" component={Plan3} options={{ title: 'Grade 3' }}/>
       <Stack.Screen name="Congrats" component={Congrats} options={{ title: ' ', headerBackVisible: false, animation: 'fade' }}/>
       <Stack.Screen name="Favorites" component={Favorites} options={{ title: 'Favorites', animation: 'none', headerBackVisible: false }}/>
-      <Stack.Screen name="AddCard" component={AddCard} />
+      <Stack.Screen name="AddCard" component={AddCard} options={{title: 'Add a card'}}/>
     </Stack.Navigator>
   );
 }
