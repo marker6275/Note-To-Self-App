@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/getting-started
  *
  */
-import { FontAwesome } from '@expo/vector-icons';
+import { FontAwesome, Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -91,10 +91,10 @@ function BottomTabNavigator() {
         name="Homescreen"
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'Homescreen'>) => ({
-          title: 'Home',
+          title: 'What makes you smile?',
           tabBarItemStyle: {
           },
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => <Feather name="smile" size={24} color={color} />,
         })}
       />
       <BottomTab.Screen
@@ -102,7 +102,7 @@ function BottomTabNavigator() {
         component={TabTwoScreen}
         options={{
           title: 'Action Plans',
-          tabBarIcon: ({ color }) => <TabBarIcon name="clipboard" color={color} />,
+          tabBarIcon: ({ color }) => <Feather name="check" size={24} color={color} />,
         }}
       />
       <BottomTab.Screen 
@@ -110,7 +110,7 @@ function BottomTabNavigator() {
       component={SettingsScreen}
       options={{
         title: 'Settings',
-        tabBarIcon: ({ color }) => <TabBarIcon name="gear" color={color}/>
+        tabBarIcon: ({ color }) => <Feather name="settings" size={22} color={color} />
       }} />
     </BottomTab.Navigator>
   );
