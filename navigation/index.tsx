@@ -52,11 +52,11 @@ function RootNavigator() {
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }}/>
       <Stack.Screen name="Homescreen" component={TabOneScreen} options={{ title: 'Home' }}/>
       <Stack.Screen name="ExtraHelp" component={ExtraHelp} options={{ title: "I Need Extra Help" }}/>
-      <Stack.Screen name="Notifs" component={Notifications} options={{ title: ' ' }}/>
-      <Stack.Screen name="Account" component={Account} options={{ title: '' }}/>
-      <Stack.Screen name="Grade1" component={Plan1} options={{ title: ' ' }}/>
-      <Stack.Screen name="Grade2" component={Plan2} options={{ title: ' ' }}/>
-      <Stack.Screen name="Grade3" component={Plan3} options={{ title: ' ' }}/>
+      <Stack.Screen name="Notifs" component={Notifications} options={{ title: '' }}/>
+      <Stack.Screen name="Account" component={Account} options={{ title: 'Account' }}/>
+      <Stack.Screen name="Grade1" component={Plan1} options={{ title: 'Grade 1' }}/>
+      <Stack.Screen name="Grade2" component={Plan2} options={{ title: 'Grade 2' }}/>
+      <Stack.Screen name="Grade3" component={Plan3} options={{ title: 'Grade 3' }}/>
       <Stack.Screen name="Congrats" component={Congrats} options={{ title: ' ', headerBackVisible: false, animation: 'fade' }}/>
       <Stack.Screen name="Favorites" component={Favorites} options={{ title: 'Favorites', animation: 'none', headerBackVisible: false }}/>
       <Stack.Screen name="AddCard" component={AddCard} />
