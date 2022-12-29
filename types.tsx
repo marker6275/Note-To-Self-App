@@ -26,6 +26,7 @@ export type RootStackParamList = {
   Grade2: undefined;
   Grade3: undefined;
   Notifs: undefined;
+  Account: undefined;
   Congrats: undefined;
   Favorites: undefined;
   AddCard: undefined;

@@ -16,7 +16,7 @@ export default ( {navigation}: {navigation: any} ) => {
       <Text style={styles.item} onPress={() => navigation.navigate('NotFound')}>Settings</Text> */}
       <Button onPress={() => navigation.navigate('Notifs')} title={'Notifications'}/>
       <Button onPress={() => navigation.navigate('NotFound')} title={'Settings'}/>
-      <Button onPress={() => navigation.navigate('NotFound')} title={'Account'}/>
+      <Button onPress={() => navigation.navigate('Account')} title={'Account'}/>
       <Button onPress={() => navigation.navigate('NotFound')} title={'Our Mission'}/>
 
 

@@ -10,7 +10,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-
+import Account from '../screens/Account';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import SettingsScreen from '../screens/Settings';
@@ -53,6 +53,7 @@ function RootNavigator() {
       <Stack.Screen name="Homescreen" component={TabOneScreen} options={{ title: 'Home' }}/>
       <Stack.Screen name="ExtraHelp" component={ExtraHelp} options={{ title: "I Need Extra Help" }}/>
       <Stack.Screen name="Notifs" component={Notifications} options={{ title: ' ' }}/>
+      <Stack.Screen name="Account" component={Account} options={{ title: '' }}/>
       <Stack.Screen name="Grade1" component={Plan1} options={{ title: ' ' }}/>
       <Stack.Screen name="Grade2" component={Plan2} options={{ title: ' ' }}/>
       <Stack.Screen name="Grade3" component={Plan3} options={{ title: ' ' }}/>
