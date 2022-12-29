@@ -18,6 +18,7 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/Homescreen';
 import TabTwoScreen from '../screens/ActionPlan';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
+import Notifications from '../screens/Notifications';
 import LinkingConfiguration from './LinkingConfiguration';
 import ExtraHelp from '../Action Plans/ExtraHelp';
 import Plan3 from '../Action Plans/Plan3';
@@ -51,6 +52,7 @@ function RootNavigator() {
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }}/>
       <Stack.Screen name="Homescreen" component={TabOneScreen} options={{ title: 'Home' }}/>
       <Stack.Screen name="ExtraHelp" component={ExtraHelp} options={{ title: "I Need Extra Help" }}/>
+      <Stack.Screen name="Notifs" component={Notifications} options={{ title: ' ' }}/>
       <Stack.Screen name="Grade1" component={Plan1} options={{ title: ' ' }}/>
       <Stack.Screen name="Grade2" component={Plan2} options={{ title: ' ' }}/>
       <Stack.Screen name="Grade3" component={Plan3} options={{ title: ' ' }}/>
