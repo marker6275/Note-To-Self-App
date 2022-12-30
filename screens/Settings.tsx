@@ -19,7 +19,7 @@ export default ( {navigation}: {navigation: any} ) => {
       <Button onPress={() => navigation.navigate('Account')} title={'Account'}/>
       <Button onPress={() => navigation.navigate('NotFound')} title={'Our Mission'}/>
 
-
+      <Button onPress={() => navigation.navigate('Login')} title={'LOGIN TEMPORARY'}/>
     </View>
   );
 }

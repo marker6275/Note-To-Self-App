@@ -27,7 +27,7 @@ import Plan1 from '../Action Plans/Plan1';
 import Congrats from '../screens/Congrats';
 import Favorites from '../screens/Favorites';
 import AddCard from '../screens/AddCardScreen';
-
+import Login from '../screens/Login';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -60,6 +60,7 @@ function RootNavigator() {
       <Stack.Screen name="Congrats" component={Congrats} options={{ title: ' ', headerBackVisible: false, animation: 'fade' }}/>
       <Stack.Screen name="Favorites" component={Favorites} options={{ title: 'Favorites', animation: 'none', headerBackVisible: false }}/>
       <Stack.Screen name="AddCard" component={AddCard} options={{title: 'Add a card'}}/>
+      <Stack.Screen name="Login" component={Login} options={{title: ' '}}/>
     </Stack.Navigator>
   );
 }
