@@ -1,9 +1,14 @@
 import { View, Text } from '../components/Themed';
-import { ScrollView, StyleSheet } from 'react-native';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { RootStackScreenProps, RootTabScreenProps } from '../types';
 import FavBar from '../components/FavoritesBar';
 import Card from '../components/Card';
+import { StyleSheet, ScrollView, Pressable, Dimensions } from 'react-native';
+import React from 'react';
+import EditScreenInfo from '../components/EditScreenInfo';
+import Button from '../components/Button';
+import { FontAwesome } from '@expo/vector-icons';
+import Star from '../components/Star';
 
 export default function Favorites({ navigation }: RootStackScreenProps<'Favorites'>) {
     return (
@@ -13,13 +18,13 @@ export default function Favorites({ navigation }: RootStackScreenProps<'Favorite
                 Favorites
             </Text>
             <View style={styles.container}>
-                {global.favList.map((c: any) => {
-                    return (
-                        <View key={c.id} style={styles.view}>
-                            {c.card}
-                        </View>
-                    );
-                })}
+                {/* {global.favList.map((c: any) => {
+                    return ( */}
+                        {/* <View key={c.id} style={styles.view}> */}
+                            {/* {c.card} */}
+                        {/* </View> */}
+                    {/* ); */}
+                {/* })} */}
             {/* </Text> */}
             </View>
         </ScrollView>
