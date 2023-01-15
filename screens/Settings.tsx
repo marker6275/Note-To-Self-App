@@ -18,8 +18,7 @@ export default ( {navigation}: {navigation: any} ) => {
       <Button onPress={() => navigation.navigate('NotFound')} title={'Settings'}/>
       <Button onPress={() => navigation.navigate('Account')} title={'Account'}/>
       <Button onPress={() => navigation.navigate('NotFound')} title={'Our Mission'}/>
-
-      <Button onPress={() => navigation.navigate('Login')} title={'LOGIN TEMPORARY'}/>
+      <Button onPress={() => navigation.navigate('Login')} title={'Login (temporary)'}/>
     </View>
   );
 }
@@ -28,12 +27,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'ghostwhite',
-    // justifyContent: 'center',
-    alignContent: 'center'
+    paddingTop: 30,
   },
   button: {
-    width: Dimensions.get('window').width,
-    backgroundColor: 'transparent',
+    backgroundColor: '#FCFAA6',
     textAlign: 'left',
   },
   item: {
