@@ -77,16 +77,16 @@ function BottomTabNavigator() {
     <BottomTab.Navigator
       initialRouteName="Homescreen"
       screenOptions={{
-        tabBarActiveTintColor: '#344648',
-        tabBarInactiveTintColor: 'white',
+        tabBarActiveTintColor: 'black',
+        tabBarInactiveTintColor: 'gray',
         tabBarStyle: {
-          backgroundColor: '#7D8E95',
+          backgroundColor: '#ADD8E6',
         },
-        tabBarActiveBackgroundColor: '#7D8E95',
-        tabBarInactiveBackgroundColor: '#7D8E95',
-        headerTintColor: 'white',
+        tabBarActiveBackgroundColor: '#ADD8E6',
+        tabBarInactiveBackgroundColor: '#ADD8E6',
+        headerTintColor: 'black',
         headerStyle: {
-          backgroundColor: '#7D8E95'
+          backgroundColor: '#ADD8E6'
         },
       }}>
       <BottomTab.Screen

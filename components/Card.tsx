@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     card: {
         height: Dimensions.get('window').width / 2 - 30,
         width: Dimensions.get('window').width / 2 - 30,
-        backgroundColor: '#FBE0C3',
+        backgroundColor: '#FCFAA6',
         margin: 15,
         borderRadius: 5,
         display: 'flex'

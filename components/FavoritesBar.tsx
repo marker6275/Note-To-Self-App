@@ -27,7 +27,7 @@ const FavBar = (props: any) => {
     var homeStyle = {
         flex: 1,
         fontSize: 25,
-        backgroundColor: home ? 'green' : '#344648',
+        backgroundColor: home ? '#ADD8E6' : 'grey',
         borderTopLeftRadius: 10,
         borderBottomLeftRadius: 10,
     }
@@ -35,7 +35,7 @@ const FavBar = (props: any) => {
     var favStyle = {
         flex: 1,
         fontSize: 25,
-        backgroundColor: fav ? 'green' : '#344648',
+        backgroundColor: fav ? '#ADD8E6' : 'grey',
         borderTopRightRadius: 10,
         borderBottomRightRadius: 10,
     }
@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     },
     ContainerTrue: {
         flex: 1,
-        backgroundColor: 'green'
     },
     container: {
         flex: 1,

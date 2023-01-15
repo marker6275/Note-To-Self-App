@@ -21,7 +21,7 @@ export default function Star() {
             <FontAwesome
             name={icon}
             size={25}
-            color={'green'}
+            color={'#ADD8E6'}
             style={styles.star}
             />
         </Pressable>
@@ -33,7 +33,7 @@ export default function Star() {
     card: {
         height: Dimensions.get('window').width / 2 - 30,
         width: Dimensions.get('window').width / 2 - 30,
-        backgroundColor: '#FBE0C3',
+        backgroundColor: '#FCFAA6',
         margin: 15,
         borderRadius: 5,
         display: 'flex'

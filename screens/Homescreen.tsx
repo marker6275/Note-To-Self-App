@@ -45,7 +45,7 @@ React.useLayoutEffect(() => {
         <FontAwesome
           name="plus"
           size={25}
-          color={'white'}
+          color={'grey'}
           style={{ marginRight: 15 }}
         />
       </Pressable>
