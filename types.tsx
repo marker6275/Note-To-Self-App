@@ -31,6 +31,7 @@ export type RootStackParamList = {
   Favorites: undefined;
   AddCard: undefined;
   Login: undefined;
+  APE: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

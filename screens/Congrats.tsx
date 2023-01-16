@@ -3,10 +3,14 @@ import { StyleSheet, TouchableOpacity, TouchableWithoutFeedback, Image } from 'r
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
 
-export default function NotFoundScreen({ navigation }: RootStackScreenProps<'Congrats'>) {
+export default function Congrats({ navigation }: RootStackScreenProps<'Congrats'>) {
+  const emojis = ['😀', '😃', '😄', '😊', '😍', '😘', '😜', '😎', '🙂', '🤗', '🤩', '🙂', '😇', '😋', '😛', '🤔', '😎', '😉']
+  const randomIndex = Math.floor(Math.random() * emojis.length);
+
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={require('../images/flower.png')} />
+      {/* <Image style={styles.image} source={require('../images/flower.png')} /> */}
+      <Text style={styles.emoji}>{emojis[randomIndex]}</Text>
       <Text style={styles.title}>Congrats! We're proud of you.</Text>
       <TouchableOpacity onPress={() => navigation.replace('Root')} style={styles.link}>
         <Text style={styles.linkText}>Return to home screen</Text>
@@ -39,5 +43,9 @@ const styles = StyleSheet.create({
     flex: 0.5,
     width: 100,
     resizeMode: 'contain',
+  },
+  emoji: {
+    fontSize: 100,
+    marginBottom: 50
   }
 });

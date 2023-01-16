@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'ghostwhite',
     paddingTop: 30,
+    justifyContent: 'center'
   },
   button: {
     backgroundColor: '#FCFAA6',
