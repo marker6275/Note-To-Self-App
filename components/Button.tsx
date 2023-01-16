@@ -7,7 +7,7 @@ export default function Button(props: { onPress: any; title?: any | undefined; }
     return (
         <TouchableOpacity style={styles.button} onPress={onPress}> 
             <Text style={styles.text}>{title}</Text>
-         </TouchableOpacity>
+        </TouchableOpacity>
     );
   }
 
@@ -20,7 +20,8 @@ export default function Button(props: { onPress: any; title?: any | undefined; }
         borderRadius: 4,
         elevation: 3,
         backgroundColor: '#FCFAA6',
-        marginBottom: 20
+        marginBottom: 20,
+        width: 300,
     },
     text: {
         fontSize: 16,

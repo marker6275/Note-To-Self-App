@@ -12,8 +12,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export default ( {navigation}: {navigation: any} ) => {
   return (
     <View style={styles.container}> 
-      {/* <Text style={styles.item} onPress={() => navigation.navigate('NotFound')}>Notifications</Text>
-      <Text style={styles.item} onPress={() => navigation.navigate('NotFound')}>Settings</Text> */}
       <Button onPress={() => navigation.navigate('Notifs')} title={'Notifications'}/>
       <Button onPress={() => navigation.navigate('NotFound')} title={'Settings'}/>
       <Button onPress={() => navigation.navigate('Account')} title={'Account'}/>
@@ -27,19 +25,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'ghostwhite',
-    paddingTop: 30,
-    justifyContent: 'center'
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  button: {
-    backgroundColor: '#FCFAA6',
-    textAlign: 'left',
-  },
-  item: {
-    fontSize: 16,
-    paddingLeft: '15%',
-    paddingVertical: 30,
-    borderBottomColor: 'black',
-    borderBottomWidth: 1,
-    color: 'black'
-  }
 });
