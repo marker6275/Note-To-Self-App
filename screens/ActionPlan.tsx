@@ -74,7 +74,8 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   image: {
-    width: 75,
-    height: 75,
+    width: 60,
+    height: 60,
+    marginBottom: 10,
   }
 });
