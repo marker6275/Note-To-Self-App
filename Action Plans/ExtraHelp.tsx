@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   button: {
-    backgroundColor: '#FFBB98',
+    backgroundColor: '#ADD8E6',
     padding: 10,
     borderRadius: 10,
 },
