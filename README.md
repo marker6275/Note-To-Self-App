@@ -1,0 +1,1 @@
+The mission for this app is to provide a preventative solution in a time of emotional crisis. The app serves to help (specifically) young adults handle their emotions in a productive, healthy manner. This app also serves to recognize those who may have general mental health problems that are commonly overlooked such as stress and anxiety. 
