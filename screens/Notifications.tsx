@@ -25,7 +25,7 @@ export default function Notifications({ navigation }: RootStackScreenProps<'Noti
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // alignItems: 'center',
+    alignItems: 'center',
     // justifyContent: 'center',
     padding: 20,
   },
